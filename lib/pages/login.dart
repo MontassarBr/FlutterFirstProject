@@ -101,7 +101,11 @@ class Login extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text("Dont have an account ? ",style: TextStyle(fontSize: 15,color: Colors.deepPurpleAccent[200]),),
-                          Text("Signup",style: TextStyle(fontSize: 15,color: Colors.deepPurpleAccent[200],fontWeight: FontWeight.bold),)
+                          GestureDetector(
+                            onTap: () {
+                                Navigator.pushNamed(context, "/signup");
+                            },
+                            child: Text("Signup",style: TextStyle(fontSize: 15,color: Colors.deepPurpleAccent[200],fontWeight: FontWeight.bold),))
                         ],
                       ),
                     )
